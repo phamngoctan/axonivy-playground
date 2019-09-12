@@ -1,0 +1,4 @@
+ChangeVaribleFromUIData #class
+demo.ChangeVaribleFromUI #namespace
+product demo.Product #field
+product PERSISTENT #fieldModifier

@@ -1,0 +1,4 @@
+KnowHowToChangeVariableData #class
+demo.KnowHowToChangeVariable #namespace
+dialogProduct demo.Product #field
+dialogProduct PERSISTENT #fieldModifier

@@ -1,0 +1,10 @@
+Product #class
+demo #namespace
+name String #field
+name PERSISTENT #fieldModifier
+product String #field
+product PERSISTENT #fieldModifier
+releaseDate String #field
+releaseDate PERSISTENT #fieldModifier
+price Number #field
+price PERSISTENT #fieldModifier
