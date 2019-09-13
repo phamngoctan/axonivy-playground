@@ -1,0 +1,61 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:pm="http://primefaces.org/mobile">
+
+<h:head>
+	<title>JSF tutorial</title>
+</h:head>
+
+<h:body>
+	<ui:composition template="/layouts/basic.xhtml">
+		<ui:define name="title">TableShowOff</ui:define>
+		<ui:define name="content">
+		
+		<h:outputStylesheet library="ivy-dialog" name="style.css" />
+			<h3>
+			This is an <a href="https://developer.axonivy.com/doc/latest/DesignerGuideHtml/ivy.userinterface.html#ivy-htmldialogs">Html Dialog</a> 
+			implemented with JSF and <a href="http://primefaces.org/">Primefaces</a> as widget library
+			</h3>
+
+			<h:dataTable value="#{productProducer.getProducts()}" var="product"
+				styleClass="productTable"
+				headerClass="productTableHeader"
+				rowClasses="productTableOddRow,productTableEvenRow">
+
+
+				<h:column>
+					<f:facet name="header">Name</f:facet>    				
+			      #{product.name}
+			   </h:column>
+
+				<h:column>
+					<f:facet name="header">Price</f:facet>    				
+			      #{product.price}
+			   </h:column>
+
+			</h:dataTable>
+
+			<hr/>
+			<hr/>
+			<hr/>
+			
+			<h:form id="form">
+				<h:panelGrid columns="2">
+					<f:facet name="header">
+						<p:messages></p:messages>
+					</f:facet>
+					
+					<br />
+					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
+				</h:panelGrid>
+			</h:form>
+			
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
